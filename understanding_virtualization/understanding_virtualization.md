@@ -5,6 +5,18 @@
 **Last updated:** 2026-01-21  
 **Repo-ready:** ✅ Markdown + GitHub-friendly diagrams (Mermaid)
 
+## 🔗📚 Resources (Quick Links)
+Jump straight to trusted docs (no random blogs 😤):
+
+- ☁️ **AWS:** What is Virtualization → https://aws.amazon.com/what-is/virtualization/
+- 🧠 **AWS:** Type 1 vs Type 2 Hypervisors → https://aws.amazon.com/compare/the-difference-between-type-1-and-type-2-hypervisors/
+- 🏛️ **NIST:** Cloud definition (SP 800-145 PDF) → https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-145.pdf
+- 🪟 **Microsoft:** Hyper‑V docs → https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/
+- 🐧 **Red Hat:** KVM / virtualization guide → https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/virtualization_getting_started_guide/chap-virtualization_getting_started-products
+- 🧰 **Oracle:** VirtualBox docs → https://docs.oracle.com/en/virtualization/virtualbox/
+- 🧱 **VMware/Broadcom:** vSphere/ESXi docs → https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html
+- 🧾 **IBM:** Hypervisors overview → https://www.ibm.com/think/topics/hypervisors
+
 ---
 
 ## 🧭 Table of Contents
@@ -58,13 +70,13 @@ Virtualization uses a special software layer called a **Hypervisor** (aka the �
 ### 🧱 Architecture
 ```mermaid
 flowchart TB
-  A[🧱 Bare Metal / Physical Server] --> B[🧠 Hypervisor (Virtualization Layer)]
-  B --> C1[🖥️ VM #1 (Guest OS)]
-  B --> C2[🖥️ VM #2 (Guest OS)]
-  B --> C3[🖥️ VM #3 (Guest OS)]
-  C1 --> D1[📦 Apps]
-  C2 --> D2[📦 Apps]
-  C3 --> D3[📦 Apps]
+  A["Bare Metal / Physical Server"] --> B["Hypervisor (Virtualization Layer)"]
+  B --> C1["VM #1 (Guest OS)"]
+  B --> C2["VM #2 (Guest OS)"]
+  B --> C3["VM #3 (Guest OS)"]
+  C1 --> D1["Apps"]
+  C2 --> D2["Apps"]
+  C3 --> D3["Apps"]
 ```
 
 ### 🔥 What the hypervisor actually does
@@ -170,13 +182,13 @@ A provider runs the data center for you.
 
 ```mermaid
 flowchart LR
-  subgraph OnPrem["🏢 Virtualization (On‑Prem)"]
-    A1[You manage 🧱 hardware] --> A2[You manage 🧠 hypervisor] --> A3[You manage 🖥️ OS] --> A4[You manage 📦 apps]
+  subgraph OnPrem[""Virtualization (On-Prem)""]
+    A1["You manage hardware"] --> A2["You manage hypervisor"] --> A3["You manage OS"] --> A4["You manage apps"]
   end
 
-  subgraph Cloud["☁️ Cloud"]
-    B1[Provider manages 🧱 hardware] --> B2[Provider manages 🧠 virtualization] --> B3[Provider may manage 🖥️ OS (service‑dependent)]
-    B3 --> B4[You run 📦 apps]
+  subgraph Cloud[""Cloud""]
+    B1["Provider manages hardware"] --> B2["Provider manages virtualization"] --> B3["Provider may manage OS (service-dependent)"]
+    B3 --> B4["You run apps"]
   end
 ```
 
@@ -186,25 +198,7 @@ flowchart LR
 
 ---
 
-## 📚 Resources
-Official / reputable references to learn deeper (bookmark these 🔖):
-
-- AWS — *What is Virtualization?*  
-  https://aws.amazon.com/what-is/virtualization/  
-- AWS — *Type 1 vs Type 2 Hypervisors*  
-  https://aws.amazon.com/compare/the-difference-between-type-1-and-type-2-hypervisors/  
-- NIST — *SP 800-145: Definition of Cloud Computing (PDF)*  
-  https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-145.pdf  
-- Microsoft Learn — *Hyper‑V Documentation*  
-  https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/  
-- Red Hat Docs — *Virtualization Getting Started / KVM overview*  
-  https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/virtualization_getting_started_guide/chap-virtualization_getting_started-products  
-- Oracle Docs — *VirtualBox Documentation*  
-  https://docs.oracle.com/en/virtualization/virtualbox/  
-- Broadcom (VMware) TechDocs — *vSphere / ESXi Docs*  
-  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html  
-- IBM — *What are Hypervisors?*  
-  https://www.ibm.com/think/topics/hypervisors  
+  
 
 ---
 
@@ -218,3 +212,30 @@ Virtualization is awesome, but always plan for:
 ---
 
 🫡 **Done.** Drop this into your repo and you’re instantly “documentation main character.” 💅
+
+---
+
+## 📚 Resources (Full List)
+Same links as above, grouped for easy browsing:
+
+### ☁️ Cloud + Concepts
+- AWS — What is Virtualization?  
+  https://aws.amazon.com/what-is/virtualization/
+- NIST — SP 800-145: Definition of Cloud Computing (PDF)  
+  https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-145.pdf
+
+### 🧠 Hypervisors
+- AWS — Type 1 vs Type 2 Hypervisors  
+  https://aws.amazon.com/compare/the-difference-between-type-1-and-type-2-hypervisors/
+- IBM — What are Hypervisors?  
+  https://www.ibm.com/think/topics/hypervisors
+
+### 🧰 Vendor Docs
+- VMware/Broadcom TechDocs — vSphere / ESXi  
+  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html
+- Microsoft Learn — Hyper‑V  
+  https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/
+- Red Hat Docs — Virtualization / KVM guide  
+  https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/virtualization_getting_started_guide/chap-virtualization_getting_started-products
+- Oracle Docs — VirtualBox  
+  https://docs.oracle.com/en/virtualization/virtualbox/
