@@ -6,8 +6,8 @@ This document contains official VMware resources for vSphere learning and admini
 
 ### Product Documentation
 - [VMware vSphere Documentation](https://docs.vmware.com/en/VMware-vSphere/)
-- [ESXi Documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-esxi-host-client/GUID-1D9C1B6A-2B5C-4C6E-9D67-5C3A8B3F5E5A.html)
-- [vCenter Server Documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-server-management/GUID-3B5AF2B1-C534-4426-B97A-D14019A8BDAB.html)
+- [ESXi Documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-esxi-host-client/)
+- [vCenter Server Documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-server-management/)
 
 ### VMware Knowledge Base
 - [VMware KB Home](https://kb.vmware.com/)

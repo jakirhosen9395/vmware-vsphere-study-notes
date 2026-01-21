@@ -192,6 +192,9 @@ esxcli system account list
 
 ### Add user
 ```bash
+# Note: Use -p to prompt for password securely instead of specifying in command
+esxcli system account add -d "Description" -i <username> -p
+# Or specify password directly (not recommended for production)
 esxcli system account add -d "Description" -i <username> -p <password>
 ```
 

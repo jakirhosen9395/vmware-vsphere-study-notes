@@ -48,7 +48,7 @@ Curated list of recommended books, blogs, and online resources for VMware vSpher
   - Community-driven content
   - Real-world scenarios and solutions
 
-- **[Altaro DOJO](https://www.altaro.com/vmware/)** (formerly vMiss.net)
+- **[Altaro DOJO](https://www.altaro.com/vmware/)**
   - Beginner to intermediate tutorials
   - Video content and written guides
 
