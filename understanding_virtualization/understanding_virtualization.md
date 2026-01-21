@@ -1,4 +1,4 @@
-# 🧠💻 Understanding Virtualization (Gen‑Z Edition) ⚡🧩
+# 🧠💻 Understanding Virtualization (Gen-Z Edition) ⚡🧩
 > *One beefy server, many “fake-but-real” computers. Efficient. Clean. Iconic.* 😌✨
 
 **Author vibe:** Senior DevOps / Ops mindset 🛠️  
@@ -11,7 +11,7 @@ Jump straight to trusted docs (no random blogs 😤):
 - ☁️ **AWS:** What is Virtualization → https://aws.amazon.com/what-is/virtualization/
 - 🧠 **AWS:** Type 1 vs Type 2 Hypervisors → https://aws.amazon.com/compare/the-difference-between-type-1-and-type-2-hypervisors/
 - 🏛️ **NIST:** Cloud definition (SP 800-145 PDF) → https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-145.pdf
-- 🪟 **Microsoft:** Hyper‑V docs → https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/
+- 🪟 **Microsoft:** Hyper-V docs → https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/
 - 🐧 **Red Hat:** KVM / virtualization guide → https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/virtualization_getting_started_guide/chap-virtualization_getting_started-products
 - 🧰 **Oracle:** VirtualBox docs → https://docs.oracle.com/en/virtualization/virtualbox/
 - 🧱 **VMware/Broadcom:** vSphere/ESXi docs → https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html
@@ -27,7 +27,7 @@ Jump straight to trusted docs (no random blogs 😤):
 - [4) Benefits of Virtualization](#4-benefits-of-virtualization)
 - [5) Virtualization Technology Companies](#5-virtualization-technology-companies)
 - [6) Virtualization vs Cloud](#6-virtualization-vs-cloud)
-- [📚 Resources](#-resources)
+- [📚 Resources (Full List)](#-resources-full-list)
 
 ---
 
@@ -91,6 +91,7 @@ Example from the lesson:
 ---
 
 ## 3) Basic Virtualization Terms
+
 ### 🧱 Bare Metal Server
 A real physical server in a data center that you can touch 🧤 — typically meaning **no OS installed yet**.
 
@@ -101,7 +102,7 @@ The virtualization OS/software installed on bare metal.
 - ❌ VM is NOT a host (common rookie mistake)
 
 ### 🖥️ Virtual Machine (VM)
-A virtual computer running on the hypervisor.
+A virtual computer running on the hypervisor.  
 Also called:
 - **Guest OS**
 - **Instance / VM instance**
@@ -126,7 +127,7 @@ A golden image used to spin up new VMs fast:
 - standard OS + standard apps + standard config ✅
 
 ### 📸 Snapshot
-A point-in-time VM state to roll back if changes go sideways.
+A point-in-time VM state to roll back if changes go sideways.  
 > Useful for upgrades/testing, but not a full backup replacement in many real-world setups.
 
 ### 🧫 Clone
@@ -156,7 +157,7 @@ A quick “who’s who” 👀
 |---|---|---|
 | **VMware** | vSphere **ESXi** | VMware Cloud |
 | **Oracle** | Oracle VM / (VirtualBox for desktop virtualization) | Oracle Cloud Infrastructure (OCI) |
-| **Microsoft** | **Hyper‑V** | Azure |
+| **Microsoft** | **Hyper-V** | Azure |
 | **Citrix** | **XenServer** | Citrix Cloud Services |
 | **Red Hat** | **KVM** | Red Hat Cloud Suite |
 | **Amazon** | (uses virtualization under the hood) | AWS |
@@ -167,6 +168,7 @@ A quick “who’s who” 👀
 ---
 
 ## 6) Virtualization vs Cloud
+
 ### 🧠 Virtualization (you run it)
 You manage everything in your data center:
 - 🧱 Hardware
@@ -182,11 +184,11 @@ A provider runs the data center for you.
 
 ```mermaid
 flowchart LR
-  subgraph OnPrem[""Virtualization (On-Prem)""]
+  subgraph OnPrem["Virtualization (On-Prem)"]
     A1["You manage hardware"] --> A2["You manage hypervisor"] --> A3["You manage OS"] --> A4["You manage apps"]
   end
 
-  subgraph Cloud[""Cloud""]
+  subgraph Cloud["Cloud"]
     B1["Provider manages hardware"] --> B2["Provider manages virtualization"] --> B3["Provider may manage OS (service-dependent)"]
     B3 --> B4["You run apps"]
   end
@@ -195,10 +197,6 @@ flowchart LR
 **One-liner:**  
 ✅ **Virtualization = technology**  
 ✅ **Cloud = service built using that tech (plus a lot of operational stuff)**
-
----
-
-  
 
 ---
 
@@ -233,7 +231,7 @@ Same links as above, grouped for easy browsing:
 ### 🧰 Vendor Docs
 - VMware/Broadcom TechDocs — vSphere / ESXi  
   https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html
-- Microsoft Learn — Hyper‑V  
+- Microsoft Learn — Hyper-V  
   https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/
 - Red Hat Docs — Virtualization / KVM guide  
   https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/virtualization_getting_started_guide/chap-virtualization_getting_started-products
