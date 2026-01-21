@@ -71,9 +71,9 @@ Virtualization কাজ করে একটা special software layer দিয়
 ```mermaid
 flowchart TB
   A["Bare Metal / Physical Server"] --> B["Hypervisor (Virtualization Layer)"]
-  B --> C1["VM #1 (Guest OS)"]
-  B --> C2["VM #2 (Guest OS)"]
-  B --> C3["VM #3 (Guest OS)"]
+  B --> C1["VM 1 (Guest OS)"]
+  B --> C2["VM 2 (Guest OS)"]
+  B --> C3["VM 3 (Guest OS)"]
   C1 --> D1["Apps"]
   C2 --> D2["Apps"]
   C3 --> D3["Apps"]
