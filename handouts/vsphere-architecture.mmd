@@ -1,0 +1,80 @@
+```mermaid
+graph TD
+    subgraph "Physical Infrastructure"
+        Server1[ESXi Host 1]
+        Server2[ESXi Host 2]
+        Server3[ESXi Host 3]
+        Storage[(Shared Storage<br/>SAN/NAS)]
+    end
+    
+    subgraph "vCenter Server"
+        vCenter[vCenter Server]
+        
+        subgraph "Datacenter: Production"
+            subgraph "Cluster: Prod-Cluster-01"
+                subgraph "Resource Pools"
+                    RP1[Web Tier]
+                    RP2[App Tier]
+                    RP3[DB Tier]
+                end
+                
+                Host1[ESXi Host 1]
+                Host2[ESXi Host 2]
+                Host3[ESXi Host 3]
+                
+                Host1 --> RP1
+                Host1 --> RP2
+                Host2 --> RP2
+                Host2 --> RP3
+                Host3 --> RP3
+            end
+        end
+    end
+    
+    subgraph "Virtual Machines"
+        VM1[Web Server 1]
+        VM2[Web Server 2]
+        VM3[App Server 1]
+        VM4[App Server 2]
+        VM5[Database 1]
+        VM6[Database 2]
+    end
+    
+    vCenter -.Manages.-> Host1
+    vCenter -.Manages.-> Host2
+    vCenter -.Manages.-> Host3
+    
+    Server1 -.Physical.-> Host1
+    Server2 -.Physical.-> Host2
+    Server3 -.Physical.-> Host3
+    
+    RP1 --> VM1
+    RP1 --> VM2
+    RP2 --> VM3
+    RP2 --> VM4
+    RP3 --> VM5
+    RP3 --> VM6
+    
+    Host1 -.Storage Access.-> Storage
+    Host2 -.Storage Access.-> Storage
+    Host3 -.Storage Access.-> Storage
+    
+    VM1 -.VMDK Files.-> Storage
+    VM2 -.VMDK Files.-> Storage
+    VM3 -.VMDK Files.-> Storage
+    VM4 -.VMDK Files.-> Storage
+    VM5 -.VMDK Files.-> Storage
+    VM6 -.VMDK Files.-> Storage
+    
+    style vCenter fill:#4A90E2,color:#fff
+    style Storage fill:#FFB84D,color:#000
+    style Host1 fill:#90EE90
+    style Host2 fill:#90EE90
+    style Host3 fill:#90EE90
+    style VM1 fill:#E6F3FF
+    style VM2 fill:#E6F3FF
+    style VM3 fill:#E6F3FF
+    style VM4 fill:#E6F3FF
+    style VM5 fill:#E6F3FF
+    style VM6 fill:#E6F3FF
+```
