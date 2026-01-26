@@ -1,0 +1,32 @@
+```mermaid
+flowchart TD
+    Start([VM vMotion Initiated]) --> PreCheck{Pre-Migration<br/>Checks}
+    
+    PreCheck -->|Fail| Error1[Display Error<br/>Migration Cancelled]
+    PreCheck -->|Pass| Reserve[Reserve Resources<br/>on Target Host]
+    
+    Reserve --> Shadow[Create Shadow VM<br/>on Target]
+    Shadow --> Memory1[Copy Memory Pages<br/>Iteratively]
+    
+    Memory1 --> QuiesceCheck{Is Memory<br/>Copy Rate<br/>Acceptable?}
+    
+    QuiesceCheck -->|No, Continue| Memory1
+    QuiesceCheck -->|Yes| Quiesce[Quiesce VM<br/>Brief Pause]
+    
+    Quiesce --> CopyFinal[Copy Final<br/>Memory State]
+    CopyFinal --> Switch[Switch Execution<br/>to Target Host]
+    
+    Switch --> Resume[Resume VM<br/>on Target]
+    Resume --> Cleanup[Cleanup Source<br/>Remove Shadow VM]
+    
+    Cleanup --> Complete([vMotion Complete])
+    
+    style Start fill:#90EE90
+    style Complete fill:#90EE90
+    style Error1 fill:#FFB6C6
+    style Quiesce fill:#FFE6AA
+    style Switch fill:#FFE6AA
+    
+    classDef checkStyle fill:#E6F3FF,stroke:#4A90E2
+    class PreCheck,QuiesceCheck checkStyle
+```
